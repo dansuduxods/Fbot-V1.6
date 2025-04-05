@@ -1,9 +1,9 @@
 const cron = require("node-cron"); // For scheduling tasks
 
 module.exports = {
-    name: "ping",
+    name: "bot",
     usePrefix: true,
-    usage: "ping",
+    usage: "bot",
     version: "1.2",
 
     execute: async ({ api, event }) => {
@@ -16,7 +16,7 @@ module.exports = {
             const endTime = Date.now(); // End time
             const ping = endTime - startTime; // Calculate delay
 
-            api.sendMessage(`🏓 Pong! Response time: ${ping}ms`, threadID, info.messageID);
+            api.sendMessage(`🏓 Po? Response time: ${ping}ms`, threadID, info.messageID);
         });
     },
 
